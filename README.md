@@ -57,3 +57,12 @@ All inputs are normalized to a 0–10 scale unless noted.
     "environment_instability": 6.0
   }
 }
+## How to Run (Local)
+
+Requirements:
+- Python 3.10+
+
+Clone the repo and run:
+
+```bash
+python -m tbp.cli --case input.json
