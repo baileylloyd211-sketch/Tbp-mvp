@@ -1,30 +1,33 @@
-# TBP MVP (Tolerance Band Profiling)
+# TBP MVP — Tolerance Band Profiling
 
-TBP is a transparent, deterministic model that estimates how close a person or system is to overload.
+TBP is a simple, transparent tool that estimates how close a person or system is to overload.
 
-It takes a small set of inputs (sleep, stress, pain, workload, support, environment) and returns:
-- **Capacity** (how much strain can be sustained right now)
-- **Load** (how much strain is being applied)
-- **Stability Ratio** = load / capacity
-- **Band + Status**: GREEN / STABLE, YELLOW / AT_RISK, RED / UNSTABLE
+It compares:
+- **Capacity** — how much strain can be handled right now
+- **Load** — how much strain is being applied
 
-This repository contains **MVP v0.1** — a minimal core that runs, produces outputs, and can be expanded.
+The result is a clear status:
+- **GREEN / STABLE**
+- **YELLOW / AT RISK**
+- **RED / UNSTABLE**
+
+This repository contains **TBP MVP v0.1** — a minimal, working core intended for testing, collaboration, and funding discussions.
 
 ---
 
-## What this is (and isn’t)
+## What this is
 
-**This is:**
-- A prototype for modeling stability and overload
-- Fully explainable (no black-box AI)
-- Designed for iteration, testing, and extension
+- A deterministic (non–AI black box) model
+- Fully explainable and adjustable
+- Designed to grow into time-based and adaptive systems
 
-**This is not:**
-- Medical advice
-- A diagnostic or clinical tool
-- A finished product
+## What this is not
 
-All parameters and weights are provisional by design.
+- Not medical advice
+- Not a diagnostic tool
+- Not a finished product
+
+All values and weights are provisional by design.
 
 ---
 
@@ -57,12 +60,3 @@ All inputs are normalized to a 0–10 scale unless noted.
     "environment_instability": 6.0
   }
 }
-## How to Run (Local)
-
-Requirements:
-- Python 3.10+
-
-Clone the repo and run:
-
-```bash
-python -m tbp.cli --case input.json
