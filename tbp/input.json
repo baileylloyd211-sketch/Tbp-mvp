@@ -4,5 +4,9 @@
   "physical_pain": 4,
   "work_hours": 55,
   "social_support": 3,
-  "environment_stability": 4
+  "environment_stability": 4,
+  "emotional_load": 6,
+  "cognitive_load": 7,
+  "financial_stress": 8,
+  "recovery_quality": 4
 }
